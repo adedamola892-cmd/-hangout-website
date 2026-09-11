@@ -1,90 +1,69 @@
-const rooms = new Map();
+import { getStore } from "@netlify/blobs";
 
-export default async (request) => {
-  const headers = {
-    "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
-  };
+const json = (data, status = 200) =>
+  new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "content-type": "application/json; charset=utf-8",
+      "cache-control": "no-store"
+    }
+  });
 
-  if (request.method === "OPTIONS") {
-    return new Response("", {
-      status: 204,
-      headers
+export default async (req) => {
+  const url = new URL(req.url);
+  const key = (url.searchParams.get("key") || "").toUpperCase();
+
+  if (!/^ROOM:[A-Z]{4}$/.test(key)) {
+    return json({ error: "Invalid room key" }, 400);
+  }
+
+  const store = getStore({
+    name: "hangout-rooms",
+    consistency: "strong"
+  });
+
+  if (req.method === "GET") {
+    const value = await store.get(key, {
+      consistency: "strong"
     });
+
+    if (value == null) {
+      return json({ error: "Not found" }, 404);
+    }
+
+    return json({ value });
   }
 
-  try {
-    const url = new URL(request.url);
-    const roomCode = (url.searchParams.get("room") || "").toUpperCase();
+  if (req.method === "POST") {
+    let body;
 
-    if (!roomCode) {
-      return new Response(
-        JSON.stringify({
-          error: "Room code is required"
-        }),
-        {
-          status: 400,
-          headers
-        }
+    try {
+      body = await req.json();
+    } catch {
+      return json({ error: "Invalid JSON" }, 400);
+    }
+
+    if (
+      typeof body?.value !== "string" ||
+      body.value.length > 100000
+    ) {
+      return json({ error: "Invalid value" }, 400);
+    }
+
+    try {
+      JSON.parse(body.value);
+    } catch {
+      return json(
+        { error: "Room state must be JSON" },
+        400
       );
     }
 
-    if (request.method === "GET") {
-      const room = rooms.get(roomCode);
+    await store.set(key, body.value);
 
-      return new Response(
-        JSON.stringify({
-          ok: true,
-          room: room || null
-        }),
-        {
-          status: 200,
-          headers
-        }
-      );
-    }
-
-    if (request.method === "POST") {
-      const body = await request.json();
-
-      rooms.set(roomCode, {
-        ...body,
-        roomCode,
-        updatedAt: Date.now()
-      });
-
-      return new Response(
-        JSON.stringify({
-          ok: true,
-          room: rooms.get(roomCode)
-        }),
-        {
-          status: 200,
-          headers
-        }
-      );
-    }
-
-    return new Response(
-      JSON.stringify({
-        error: "Method not allowed"
-      }),
-      {
-        status: 405,
-        headers
-      }
-    );
-  } catch (error) {
-    return new Response(
-      JSON.stringify({
-        error: "Server error"
-      }),
-      {
-        status: 500,
-        headers
-      }
-    );
+    return json({ ok: true });
   }
+
+  return json({ error: "Method not allowed" }, 405);
 };
+      
