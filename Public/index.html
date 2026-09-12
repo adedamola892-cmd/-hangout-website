@@ -67,7 +67,7 @@ async function leave(){
 function room(){
   const s=roomState;
   app.innerHTML=`<div class="room-header"><div><h2 style="margin:0 0 4px">${esc(s.name)}</h2><span class="room-code">CODE: ${s.code}</span></div><button class="link-btn" id="leave">leave</button></div><div class="members-row">${s.members.map(m=>`<div class="member-chip">${m.avatar} ${esc(m.name)}</div>`).join('')}</div><div class="tabs"><button class="${activeTab==='space'?'active':''}" id="spaceTab">🌐 Space</button><button class="${activeTab==='chat'?'active':''}" id="chatTab">💬 Chat</button><button class="${activeTab==='video'?'active':''}" id="videoTab">📹 Video</button><button class="${activeTab==='game'?'active':''}" id="gameTab">🎮 Tic-Tac-Toe</button></div><div id="body"></div><div class="share-note">Share party code <b>${s.code}</b> with friends so they can join too.</div>`;
-  leave.onclick=leave;
+  document.getElementById('leave').onclick=leave;
   spaceTab.onclick=async()=>{if(activeTab==='video')await stopVideo(false);activeTab='space';render()};
   chatTab.onclick=async()=>{if(activeTab==='video')await stopVideo(false);activeTab='chat';render()};
   videoTab.onclick=()=>{activeTab='video';render()};
