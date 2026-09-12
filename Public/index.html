@@ -8,6 +8,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#FBF7FF;--ink:#241536;--pink:#FF5D8F;--yellow:#FFC145;--teal:#2EC4B6;--purple:#7B5EA7;--paper:#fff}*{box-sizing:border-box}body{margin:0;font-family:Nunito,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden}h1,h2,h3,.display{font-family:'Baloo 2',sans-serif}.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden}.confetti span{position:absolute;border-radius:50%;opacity:.5;animation:drift 14s ease-in-out infinite}@keyframes drift{50%{transform:translateY(-26px) rotate(180deg)}}.app{position:relative;z-index:1;max-width:480px;margin:auto;min-height:100vh;padding:20px 16px 32px}.sticker-btn{font-family:'Baloo 2';font-weight:700;font-size:16px;border:3px solid var(--ink);border-radius:16px;padding:14px 20px;background:var(--yellow);color:var(--ink);cursor:pointer;box-shadow:5px 5px 0 var(--ink);width:100%}.sticker-btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}.sticker-btn.pink{background:var(--pink);color:#fff}.sticker-btn.teal{background:var(--teal);color:#fff}.sticker-btn.small{padding:8px 14px;font-size:14px;width:auto;box-shadow:3px 3px 0 var(--ink)}.card{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:20px;box-shadow:6px 6px 0 var(--purple)}input[type=text]{font-family:Nunito;font-weight:700;font-size:16px;border:3px solid var(--ink);border-radius:14px;padding:12px 14px;width:100%;outline:none;background:#fff}.logo{text-align:center;margin:6px 0 18px}.blob{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:38% 62% 60% 40%/45% 40% 60% 55%;background:var(--pink);border:3px solid var(--ink);font-size:34px;box-shadow:5px 5px 0 var(--ink)}.logo h1{font-size:30px;margin:6px 0 2px}.logo p,.hint{color:#5b4b73;font-weight:700}.avatar-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0 18px}.avatar-opt{font-size:24px;text-align:center;padding:10px 0;border-radius:14px;border:3px solid var(--ink);background:#fff;cursor:pointer}.avatar-opt.selected{background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}.field-label{font-weight:800;font-size:13px;display:block;margin:0 0 6px 2px;color:#5b4b73}.field{margin-bottom:14px}.home-tabs,.tabs{display:flex;gap:8px;margin:14px 0 12px}.home-tabs button,.tabs button{flex:1;font-family:'Baloo 2';font-weight:700;padding:10px;border-radius:14px;border:3px solid var(--ink);background:#fff;cursor:pointer}.home-tabs button.active{background:var(--teal);color:#fff}.tabs button.active{background:var(--pink);color:#fff}.top-actions,.room-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}.link-btn{background:none;border:0;font-weight:800;color:var(--purple);cursor:pointer;text-decoration:underline}.room-code{font-family:'Baloo 2';background:var(--purple);color:#fff;padding:4px 10px;border-radius:10px;font-size:13px;letter-spacing:1px}.members-row{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.member-chip{display:flex;align-items:center;gap:6px;background:var(--bg);border:2px solid var(--ink);border-radius:999px;padding:4px 10px;font-weight:700;font-size:13px}.chat-box{height:280px;overflow-y:auto;border:3px solid var(--ink);border-radius:16px;background:#fffdf9;padding:10px;margin-bottom:10px}.msg{margin-bottom:10px;display:flex;gap:8px}.bubble-msg{background:var(--bg);border:2px solid var(--ink);border-radius:12px;padding:6px 10px;font-size:14px;font-weight:600}.who{font-size:11px;font-weight:800;color:#5b4b73}.chat-input-row{display:flex;gap:8px}.board{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.cell{aspect-ratio:1;border:3px solid var(--ink);border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2';font-size:34px;cursor:pointer}.status-line{text-align:center;font-weight:800;font-family:'Baloo 2'}.pill{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:3px 10px;font-size:12px}.share-note{background:#FFF3D6;border:2px dashed var(--ink);border-radius:12px;padding:8px 10px;font-size:12px;font-weight:700;margin-top:10px}.space-area{position:relative;height:320px;border:3px solid var(--ink);border-radius:20px;background:linear-gradient(180deg,#E4F7EA,#CDEEDD);overflow:hidden;cursor:crosshair}.space-rug{position:absolute;width:160px;height:92px;left:50%;top:60%;transform:translate(-50%,-50%);border:3px solid var(--ink);border-radius:50%;background:var(--yellow);opacity:.45}.plant{position:absolute;font-size:26px}.space-avatar{position:absolute;transform:translate(-50%,-100%);text-align:center;transition:left .6s ease,top .6s ease;pointer-events:none}.space-avatar .face{width:38px;height:38px;border-radius:50%;background:#fff;border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:3px 3px 0 var(--ink)}.space-avatar.me .face{background:var(--pink)}.tag{font-size:10px;font-weight:800;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:1px 6px;margin-top:3px;white-space:nowrap}.error{color:#c0246a;font-size:12px;font-weight:800}.hint{font-size:12px;margin-top:8px}
+
+.video-wrap{margin-top:6px}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.video-card{position:relative;min-height:180px;background:#1b1325;border:3px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:4px 4px 0 var(--ink)}
+.video-card video{width:100%;height:100%;min-height:180px;object-fit:cover;background:#17111f;display:block}
+.video-label{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);border:2px solid var(--ink);border-radius:999px;padding:3px 8px;font-size:11px;font-weight:800}
+.video-placeholder{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#fff;font-weight:800}
+.call-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.call-controls .sticker-btn{padding:10px 8px;font-size:13px}
+.call-status{text-align:center;font-weight:800;color:#5b4b73;font-size:12px;margin:8px 0}
+@media(max-width:380px){.video-grid{grid-template-columns:1fr}.video-card,.video-card video,.video-placeholder{min-height:220px}.tabs{flex-wrap:wrap}.tabs button{min-width:46%}}
+
 </style>
 </head>
 <body><div class="confetti" id="confetti"></div><main class="app" id="app"></main>
@@ -15,7 +27,10 @@
 const COLORS=['#FF5D8F','#FFC145','#2EC4B6','#7B5EA7'];const conf=document.getElementById('confetti');for(let i=0;i<16;i++){const s=document.createElement('span'),z=6+Math.random()*10;s.style.cssText=`width:${z}px;height:${z}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${COLORS[i%4]};animation-delay:${Math.random()*6}s`;conf.appendChild(s)}
 window.storage={async get(key){const r=await fetch('/.netlify/functions/room?key='+encodeURIComponent(key),{cache:'no-store'});if(r.status===404)return null;if(!r.ok)throw new Error('Read failed');return r.json()},async set(key,value){const r=await fetch('/.netlify/functions/room?key='+encodeURIComponent(key),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({value})});if(!r.ok)throw new Error('Write failed');return r.json()}};
 const AVATARS=['😺','🐼','🦊','🐸','🐵','🦄','🐙','🐯','🐧','🐶','🦖','🐨','🐰','🐢','🦁','🐷','🐻','🦉','🐝','🐬'];
-let me={name:'',avatar:AVATARS[0]},currentRoom=null,roomState=null,activeTab='space',homeTab='create',pollTimer=null;const app=document.getElementById('app');
+let me={name:'',avatar:AVATARS[0]},currentRoom=null,roomState=null,activeTab='space',homeTab='create',pollTimer=null;
+let localStream=null,peer=null,remoteStream=null,micOn=true,camOn=true,usingFrontCamera=true,videoBusy=false;
+const app=document.getElementById('app');
+const rtcConfig={iceServers:[{urls:'stun:stun.l.google.com:19302'},{urls:'stun:stun1.l.google.com:19302'}]};
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}function randomPos(){return{x:15+Math.random()*70,y:22+Math.random()*56}}function freshGame(){return{board:Array(9).fill(null),turn:'X',winner:null}}
 function render(){if(!me.savedName)onboard();else if(!currentRoom)home();else room()}
 function onboard(){app.innerHTML=`<div class="logo"><div class="blob">👋</div><h1>Hangout</h1><p>a place to make friends & play</p></div><div class="card"><div class="field"><label class="field-label">What should we call you?</label><input type="text" id="name" maxlength="18" placeholder="Your name" value="${esc(me.name)}"></div><label class="field-label">Pick your look</label><div class="avatar-grid">${AVATARS.map(a=>`<div class="avatar-opt ${a===me.avatar?'selected':''}" data-a="${a}">${a}</div>`).join('')}</div><button class="sticker-btn pink" id="go">Let's go</button></div>`;document.getElementById('name').oninput=e=>me.name=e.target.value;document.querySelectorAll('.avatar-opt').forEach(x=>x.onclick=()=>{me.avatar=x.dataset.a;render()});document.getElementById('go').onclick=()=>{if(!me.name.trim())return;me.savedName=true;localStorage.setItem('hangout-profile',JSON.stringify(me));render()}}
@@ -23,10 +38,203 @@ function home(){app.innerHTML=`<div class="top-actions"><div><span style="font-s
 function makeCode(){const L='ABCDEFGHJKLMNPQRSTUVWXYZ';return Array.from({length:4},()=>L[Math.floor(Math.random()*L.length)]).join('')}
 async function createRoom(){try{let code,res;for(let i=0;i<5;i++){code=makeCode();res=await storage.get('ROOM:'+code);if(!res)break}const state={code,name:(roomName.value||'Untitled Hangout').trim(),members:[{name:me.name,avatar:me.avatar}],messages:[{system:true,text:`${me.name} started the hangout 🎉`}],game:freshGame(),positions:{[me.name]:randomPos()}};await storage.set('ROOM:'+code,JSON.stringify(state));currentRoom=code;roomState=state;activeTab='space';render();startPolling()}catch(e){err.innerHTML='<p class="error">Could not create hangout. Try again.</p>'}}
 async function joinRoom(){const code=document.getElementById('code').value.trim().toUpperCase();if(code.length!==4){err.innerHTML='<p class="error">Codes are 4 letters.</p>';return}try{const res=await storage.get('ROOM:'+code);if(!res){err.innerHTML='<p class="error">No hangout found with that code.</p>';return}const s=JSON.parse(res.value);s.positions||={};if(!s.members.some(m=>m.name===me.name)){s.members.push({name:me.name,avatar:me.avatar});s.messages.push({system:true,text:`${me.name} joined the hangout 👋`});s.positions[me.name]=randomPos();await storage.set('ROOM:'+code,JSON.stringify(s))}currentRoom=code;roomState=s;render();startPolling()}catch(e){err.innerHTML='<p class="error">Something went wrong. Try again.</p>'}}
-function startPolling(){clearInterval(pollTimer);pollTimer=setInterval(refreshRoom,1800)}async function refreshRoom(){if(!currentRoom)return;try{const r=await storage.get('ROOM:'+currentRoom);if(r){roomState=JSON.parse(r.value);if(document.activeElement?.id!=='chatInput')render()}}catch{}}async function saveRoom(){await storage.set('ROOM:'+currentRoom,JSON.stringify(roomState))}function leave(){clearInterval(pollTimer);currentRoom=null;roomState=null;render()}
-function room(){const s=roomState;app.innerHTML=`<div class="room-header"><div><h2 style="margin:0 0 4px">${esc(s.name)}</h2><span class="room-code">CODE: ${s.code}</span></div><button class="link-btn" id="leave">leave</button></div><div class="members-row">${s.members.map(m=>`<div class="member-chip">${m.avatar} ${esc(m.name)}</div>`).join('')}</div><div class="tabs"><button class="${activeTab==='space'?'active':''}" id="spaceTab">🌐 Space</button><button class="${activeTab==='chat'?'active':''}" id="chatTab">💬 Chat</button><button class="${activeTab==='game'?'active':''}" id="gameTab">🎮 Tic-Tac-Toe</button></div><div id="body"></div><div class="share-note">Share code <b>${s.code}</b> with friends so they can join too.</div>`;leave.onclick=leave;spaceTab.onclick=()=>{activeTab='space';render()};chatTab.onclick=()=>{activeTab='chat';render()};gameTab.onclick=()=>{activeTab='game';render()};if(activeTab==='space')space(document.getElementById('body'));if(activeTab==='chat')chat(document.getElementById('body'));if(activeTab==='game')game(document.getElementById('body'))}
+function startPolling(){clearInterval(pollTimer);pollTimer=setInterval(refreshRoom,1200)}
+async function refreshRoom(){
+  if(!currentRoom)return;
+  try{
+    const r=await storage.get('ROOM:'+currentRoom);
+    if(!r)return;
+    roomState=JSON.parse(r.value);
+    if(activeTab==='video'){
+      await processVideoSignal();
+      updateVideoStatus();
+      return;
+    }
+    if(document.activeElement?.id!=='chatInput')render();
+  }catch{}
+}
+async function saveRoom(){await storage.set('ROOM:'+currentRoom,JSON.stringify(roomState))}
+async function leave(){
+  clearInterval(pollTimer);
+  await stopVideo(true);
+  currentRoom=null;roomState=null;activeTab='space';render();
+}
+function room(){
+  const s=roomState;
+  app.innerHTML=`<div class="room-header"><div><h2 style="margin:0 0 4px">${esc(s.name)}</h2><span class="room-code">CODE: ${s.code}</span></div><button class="link-btn" id="leave">leave</button></div><div class="members-row">${s.members.map(m=>`<div class="member-chip">${m.avatar} ${esc(m.name)}</div>`).join('')}</div><div class="tabs"><button class="${activeTab==='space'?'active':''}" id="spaceTab">🌐 Space</button><button class="${activeTab==='chat'?'active':''}" id="chatTab">💬 Chat</button><button class="${activeTab==='video'?'active':''}" id="videoTab">📹 Video</button><button class="${activeTab==='game'?'active':''}" id="gameTab">🎮 Tic-Tac-Toe</button></div><div id="body"></div><div class="share-note">Share code <b>${s.code}</b> with friends so they can join too.</div>`;
+  leave.onclick=leave;
+  spaceTab.onclick=async()=>{if(activeTab==='video')await stopVideo(false);activeTab='space';render()};
+  chatTab.onclick=async()=>{if(activeTab==='video')await stopVideo(false);activeTab='chat';render()};
+  videoTab.onclick=()=>{activeTab='video';render()};
+  gameTab.onclick=async()=>{if(activeTab==='video')await stopVideo(false);activeTab='game';render()};
+  if(activeTab==='space')space(document.getElementById('body'));
+  if(activeTab==='chat')chat(document.getElementById('body'));
+  if(activeTab==='video')videoRoom(document.getElementById('body'));
+  if(activeTab==='game')game(document.getElementById('body'));
+}
 function space(b){const s=roomState;s.positions||={};s.members.forEach(m=>s.positions[m.name]||=(randomPos()));b.innerHTML=`<p class="status-line" style="font-size:13px">Tap anywhere to walk over 🚶</p><div class="space-area" id="area"><div class="space-rug"></div><div class="plant" style="left:8%;top:14%">🌿</div><div class="plant" style="right:6%;top:16%">🌵</div><div class="plant" style="left:8%;bottom:8%">🌸</div><div class="plant" style="right:6%;bottom:7%">🌳</div>${s.members.map(m=>{const p=s.positions[m.name];return`<div class="space-avatar ${m.name===me.name?'me':''}" style="left:${p.x}%;top:${p.y}%"><div class="face">${m.avatar}</div><div class="tag">${esc(m.name)}${m.name===me.name?' (you)':''}</div></div>`}).join('')}</div><p class="hint" style="text-align:center">Everyone in the room can see where you're standing.</p>`;area.onclick=async e=>{const r=area.getBoundingClientRect();const x=Math.min(94,Math.max(6,(e.clientX-r.left)/r.width*100)),y=Math.min(88,Math.max(10,(e.clientY-r.top)/r.height*100));const latest=await storage.get('ROOM:'+currentRoom);if(latest)roomState=JSON.parse(latest.value);roomState.positions||={};roomState.positions[me.name]={x,y};await saveRoom();render()}}
 function chat(b){const s=roomState;b.innerHTML=`<div class="chat-box" id="chatBox">${s.messages.map(m=>m.system?`<div class="status-line" style="font-size:12px;color:#5b4b73">${esc(m.text)}</div>`:`<div class="msg"><span>${m.avatar}</span><div><div class="who">${esc(m.name)}</div><div class="bubble-msg">${esc(m.text)}</div></div></div>`).join('')}</div><div class="chat-input-row"><input type="text" id="chatInput" maxlength="200" placeholder="Type a message..."><button class="sticker-btn small pink" id="send">Send</button></div>`;chatBox.scrollTop=chatBox.scrollHeight;const go=async()=>{const text=chatInput.value.trim();if(!text)return;chatInput.value='';const latest=await storage.get('ROOM:'+currentRoom);if(latest)roomState=JSON.parse(latest.value);roomState.messages.push({name:me.name,avatar:me.avatar,text});await saveRoom();render()};send.onclick=go;chatInput.onkeydown=e=>{if(e.key==='Enter')go()}}
+
+function waitForIce(pc){
+  if(pc.iceGatheringState==='complete')return Promise.resolve();
+  return new Promise(resolve=>{
+    const done=()=>{if(pc.iceGatheringState==='complete'){pc.removeEventListener('icegatheringstatechange',done);resolve()}};
+    pc.addEventListener('icegatheringstatechange',done);
+    setTimeout(resolve,6000);
+  });
+}
+function ensurePeer(){
+  if(peer)return peer;
+  peer=new RTCPeerConnection(rtcConfig);
+  remoteStream=new MediaStream();
+  peer.ontrack=e=>{
+    e.streams[0]?.getTracks().forEach(t=>{
+      if(!remoteStream.getTracks().some(x=>x.id===t.id))remoteStream.addTrack(t);
+    });
+    const v=document.getElementById('remoteVideo');
+    if(v){v.srcObject=remoteStream;v.play().catch(()=>{})}
+  };
+  peer.onconnectionstatechange=()=>updateVideoStatus();
+  if(localStream)localStream.getTracks().forEach(t=>peer.addTrack(t,localStream));
+  return peer;
+}
+async function startVideo(){
+  if(videoBusy)return;
+  videoBusy=true;
+  try{
+    if(!navigator.mediaDevices?.getUserMedia){
+      alert('Camera and microphone are not supported in this browser.');
+      return;
+    }
+    if(!localStream){
+      localStream=await navigator.mediaDevices.getUserMedia({
+        video:{facingMode:usingFrontCamera?'user':'environment'},
+        audio:true
+      });
+    }
+    micOn=true;camOn=true;
+    const lv=document.getElementById('localVideo');
+    if(lv){lv.srcObject=localStream;lv.play().catch(()=>{})}
+    const latest=await storage.get('ROOM:'+currentRoom);
+    if(latest)roomState=JSON.parse(latest.value);
+    roomState.video ||= {host:null,guest:null,offer:null,answer:null,updatedAt:Date.now()};
+    const sig=roomState.video;
+    if(!sig.host || !roomState.members.some(m=>m.name===sig.host)){
+      sig.host=me.name;sig.guest=null;sig.offer=null;sig.answer=null;
+    }else if(sig.host!==me.name && !sig.guest){
+      sig.guest=me.name;
+    }
+    sig.updatedAt=Date.now();
+    await saveRoom();
+    await processVideoSignal();
+    paintVideo();
+  }catch(e){
+    alert('Please allow camera and microphone access, then try again.');
+  }finally{
+    videoBusy=false;
+  }
+}
+async function processVideoSignal(){
+  if(!localStream || !roomState?.video)return;
+  const sig=roomState.video;
+  const pc=ensurePeer();
+  if(sig.host===me.name){
+    if(!sig.offer){
+      const offer=await pc.createOffer();
+      await pc.setLocalDescription(offer);
+      await waitForIce(pc);
+      const latest=await storage.get('ROOM:'+currentRoom);
+      if(latest)roomState=JSON.parse(latest.value);
+      roomState.video ||= {};
+      roomState.video.host=me.name;
+      roomState.video.offer={type:pc.localDescription.type,sdp:pc.localDescription.sdp};
+      roomState.video.updatedAt=Date.now();
+      await saveRoom();
+    }
+    if(roomState.video?.answer && !pc.currentRemoteDescription){
+      await pc.setRemoteDescription(roomState.video.answer);
+    }
+  }else if(sig.host && sig.host!==me.name){
+    if(sig.offer && !pc.currentRemoteDescription){
+      await pc.setRemoteDescription(sig.offer);
+    }
+    if(sig.offer && !sig.answer){
+      const answer=await pc.createAnswer();
+      await pc.setLocalDescription(answer);
+      await waitForIce(pc);
+      const latest=await storage.get('ROOM:'+currentRoom);
+      if(latest)roomState=JSON.parse(latest.value);
+      roomState.video ||= {};
+      roomState.video.guest=me.name;
+      roomState.video.answer={type:pc.localDescription.type,sdp:pc.localDescription.sdp};
+      roomState.video.updatedAt=Date.now();
+      await saveRoom();
+    }
+  }
+}
+function updateVideoStatus(){
+  const el=document.getElementById('callStatus');
+  if(!el)return;
+  if(!localStream){el.textContent='Tap “Start camera + mic” to join the video call.';return}
+  const st=peer?.connectionState;
+  if(st==='connected')el.textContent='Connected — you can see and hear each other 🎉';
+  else if(st==='connecting')el.textContent='Connecting…';
+  else if(st==='failed')el.textContent='Connection failed. Try leaving Video and starting again.';
+  else if(roomState?.video?.host===me.name && !roomState?.video?.guest)el.textContent='Camera is on. Waiting for a friend to join Video…';
+  else el.textContent='Setting up the video call…';
+}
+function paintVideo(){
+  const lv=document.getElementById('localVideo');
+  if(lv && localStream){lv.srcObject=localStream;lv.play().catch(()=>{})}
+  const rv=document.getElementById('remoteVideo');
+  if(rv && remoteStream){rv.srcObject=remoteStream;rv.play().catch(()=>{})}
+  const m=document.getElementById('muteBtn');if(m)m.textContent=micOn?'🔇 Mute':'🎤 Unmute';
+  const c=document.getElementById('camBtn');if(c)c.textContent=camOn?'📷 Camera off':'📹 Camera on';
+  updateVideoStatus();
+}
+function videoRoom(b){
+  b.innerHTML=`<div class="video-wrap">
+    <div class="video-grid">
+      <div class="video-card"><video id="localVideo" autoplay muted playsinline></video><div class="video-label">${esc(me.name)} (you)</div></div>
+      <div class="video-card"><video id="remoteVideo" autoplay playsinline></video><div class="video-label">Friend</div></div>
+    </div>
+    <p class="call-status" id="callStatus"></p>
+    ${localStream?'':`<button class="sticker-btn teal" id="startVideoBtn">📹 Start camera + mic</button>`}
+    <div class="call-controls">
+      <button class="sticker-btn small" id="muteBtn">${micOn?'🔇 Mute':'🎤 Unmute'}</button>
+      <button class="sticker-btn small" id="camBtn">${camOn?'📷 Camera off':'📹 Camera on'}</button>
+    </div>
+  </div>`;
+  if(document.getElementById('startVideoBtn'))startVideoBtn.onclick=startVideo;
+  muteBtn.onclick=()=>{
+    if(!localStream)return startVideo();
+    micOn=!micOn;localStream.getAudioTracks().forEach(t=>t.enabled=micOn);paintVideo();
+  };
+  camBtn.onclick=()=>{
+    if(!localStream)return startVideo();
+    camOn=!camOn;localStream.getVideoTracks().forEach(t=>t.enabled=camOn);paintVideo();
+  };
+  paintVideo();
+  if(localStream)processVideoSignal().catch(()=>{});
+}
+async function stopVideo(clearSignal=false){
+  if(peer){try{peer.close()}catch{}peer=null}
+  if(localStream){localStream.getTracks().forEach(t=>t.stop());localStream=null}
+  remoteStream=null;micOn=true;camOn=true;
+  if(clearSignal && currentRoom){
+    try{
+      const latest=await storage.get('ROOM:'+currentRoom);
+      if(latest){
+        roomState=JSON.parse(latest.value);
+        if(roomState.video && (roomState.video.host===me.name || roomState.video.guest===me.name)){
+          roomState.video=null;
+          await saveRoom();
+        }
+      }
+    }catch{}
+  }
+}
+
 function winner(a){const L=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];for(const [x,y,z] of L)if(a[x]&&a[x]===a[y]&&a[x]===a[z])return a[x];return a.every(Boolean)?'draw':null}
 function game(b){roomState.game||=freshGame();const g=roomState.game,p=roomState.members.slice(0,2),sym=p[0]?.name===me.name?'X':p[1]?.name===me.name?'O':null;let st=p.length<2?'Waiting for a second friend to join...':g.winner==='draw'?"It's a draw! 🤝":g.winner?`${(g.winner==='X'?p[0]:p[1]).name} wins! 🏆`:!sym?`Watching ${p[0].name} vs ${p[1].name}`:g.turn===sym?'Your move!':`Waiting for ${g.turn==='X'?p[0].name:p[1].name}...`;b.innerHTML=`<p class="status-line">${esc(st)}</p>${p.length>=2?`<p style="text-align:center"><span class="pill">${p[0].avatar} ${esc(p[0].name)} = X</span> <span class="pill" style="background:var(--teal);color:#fff">${p[1].avatar} ${esc(p[1].name)} = O</span></p>`:''}<div class="board">${g.board.map((v,i)=>`<div class="cell" data-i="${i}">${v||''}</div>`).join('')}</div>${g.winner?'<button class="sticker-btn teal" id="again">Play again 🔄</button>':''}`;if(sym&&!g.winner)document.querySelectorAll('.cell').forEach(c=>c.onclick=async()=>{const i=+c.dataset.i;if(g.board[i]||g.turn!==sym)return;const latest=await storage.get('ROOM:'+currentRoom);if(latest)roomState=JSON.parse(latest.value);const gg=roomState.game;if(gg.board[i]||gg.turn!==sym)return;gg.board[i]=sym;gg.winner=winner(gg.board);if(!gg.winner)gg.turn=sym==='X'?'O':'X';await saveRoom();render()});if(document.getElementById('again'))again.onclick=async()=>{const latest=await storage.get('ROOM:'+currentRoom);if(latest)roomState=JSON.parse(latest.value);roomState.game=freshGame();await saveRoom();render()}}
 try{const p=JSON.parse(localStorage.getItem('hangout-profile'));if(p?.name){me=p;me.savedName=true}}catch{}render();
