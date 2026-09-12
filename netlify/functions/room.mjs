@@ -45,7 +45,7 @@ export default async (req) => {
 
     if (
       typeof body?.value !== "string" ||
-      body.value.length > 100000
+      body.value.length > 250000
     ) {
       return json({ error: "Invalid value" }, 400);
     }
