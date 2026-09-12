@@ -1,0 +1,10 @@
+{
+  "name": "Party Hangout",
+  "short_name": "Party Hangout",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7FF",
+  "theme_color": "#2EC4B6",
+  "description": "Party Hangout — live rooms with video, chat, games, and shared spaces.",
+  "icons": []
+}
